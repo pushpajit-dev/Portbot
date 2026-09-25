@@ -15,8 +15,8 @@ class WakelockService extends GetxService {
     if (_isMobile) {
       FlutterForegroundTask.init(
         androidNotificationOptions: AndroidNotificationOptions(
-          channelId: 'portable_ai_foreground',
-          channelName: 'Uncensored Local AI',
+          channelId: 'portbot_foreground',
+          channelName: 'Portbot',
           channelDescription: 'Keeps downloads and AI inference running',
           channelImportance: NotificationChannelImportance.LOW,
           priority: NotificationPriority.LOW,

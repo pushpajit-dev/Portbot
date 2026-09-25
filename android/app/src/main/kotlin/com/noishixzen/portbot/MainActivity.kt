@@ -1,4 +1,4 @@
-package com.portableai.portable_ai_flutter
+package com.noishixzen.portbot
 
 import io.flutter.embedding.android.FlutterActivity
 

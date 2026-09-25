@@ -5,10 +5,10 @@
 // 'flutter create' template.
 
 // The application's name. By default this is also the title of the Flutter window.
-PRODUCT_NAME = portable_ai_flutter
+PRODUCT_NAME = portbot
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.portableai.portableAiFlutter
+PRODUCT_BUNDLE_IDENTIFIER = com.noishixzen.portbot
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2026 com.portableai. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2026 NoishiXzen. All rights reserved.

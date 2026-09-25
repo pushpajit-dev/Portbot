@@ -655,14 +655,29 @@ class _SettingsBody extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Uncensored Local AI v2.0.0',
+                      'Portbot v2.0.0',
                       style: TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w500,
-                        color: context.textM,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: context.text,
                       ),
                     ),
-                    const SizedBox(height: 4),
+                    const SizedBox(height: 6),
+                    Text(
+                      'Developed by NoishiXzen',
+                      style: TextStyle(fontSize: 12, color: context.textM, fontWeight: FontWeight.w500),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      'noishixzen@gmail.com',
+                      style: TextStyle(fontSize: 11, color: context.textD),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      'More apps: aivorygen.netlify.app',
+                      style: TextStyle(fontSize: 11, color: AppColors.accent),
+                    ),
+                    const SizedBox(height: 6),
                     Text(
                       'Powered by llamadart + llama.cpp',
                       style: TextStyle(fontSize: 11, color: context.textD),

@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.portableai" "\0"
-            VALUE "FileDescription", "portable_ai_flutter" "\0"
+            VALUE "CompanyName", "NoishiXzen" "\0"
+            VALUE "FileDescription", "Portbot" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "portable_ai_flutter" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2026 com.portableai. All rights reserved." "\0"
-            VALUE "OriginalFilename", "portable_ai_flutter.exe" "\0"
-            VALUE "ProductName", "portable_ai_flutter" "\0"
+            VALUE "InternalName", "portbot" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2026 NoishiXzen. All rights reserved." "\0"
+            VALUE "OriginalFilename", "portbot.exe" "\0"
+            VALUE "ProductName", "Portbot" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

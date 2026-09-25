@@ -4,11 +4,11 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-import 'package:portable_ai_flutter/models/chat_model.dart';
-import 'package:portable_ai_flutter/models/message_model.dart';
-import 'package:portable_ai_flutter/services/chat_storage_service.dart';
-import 'package:portable_ai_flutter/services/llm_service.dart';
-import 'package:portable_ai_flutter/services/local_api_server_service.dart';
+import 'package:portbot/models/chat_model.dart';
+import 'package:portbot/models/message_model.dart';
+import 'package:portbot/services/chat_storage_service.dart';
+import 'package:portbot/services/llm_service.dart';
+import 'package:portbot/services/local_api_server_service.dart';
 
 void main() {
   late Directory tempDir;

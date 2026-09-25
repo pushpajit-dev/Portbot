@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.portableai.portable_ai_flutter"
+    namespace = "com.noishixzen.portbot"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -21,7 +21,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.portableai.portable_ai_flutter"
+        applicationId = "com.noishixzen.portbot"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

@@ -1,11 +1,11 @@
 {
-    "name": "portable_ai_flutter",
-    "short_name": "portable_ai_flutter",
+    "name": "Portbot",
+    "short_name": "Portbot",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Portbot — Run uncensored local LLMs natively on any device.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
