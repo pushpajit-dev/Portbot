@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -44,7 +44,7 @@ class _ModelLibraryBodyState extends State<_ModelLibraryBody> {
 
     return Column(
       children: [
-        // ── Top bar ──────────────────────────────────
+        // â”€â”€ Top bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         Container(
           padding: EdgeInsets.only(
             top: widget.showBackButton ? MediaQuery.of(context).padding.top : 0,
@@ -83,7 +83,7 @@ class _ModelLibraryBodyState extends State<_ModelLibraryBody> {
           ),
         ),
 
-        // ── Filter chips ─────────────────────────────
+        // â”€â”€ Filter chips â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         Container(
           height: 48,
           padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -98,7 +98,7 @@ class _ModelLibraryBodyState extends State<_ModelLibraryBody> {
           ),
         ),
 
-        // ── Body ─────────────────────────────────────
+        // â”€â”€ Body â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         Expanded(
           child: Obx(() {
             final allCatalog = ctrl.catalog.toList();
@@ -122,7 +122,6 @@ class _ModelLibraryBodyState extends State<_ModelLibraryBody> {
                 filtered = allCatalog.where((m) => m.isCustom).toList();
                 break;
               case _Filter.all:
-              default:
                 filtered = allCatalog;
             }
 
@@ -179,7 +178,7 @@ class _ModelLibraryBodyState extends State<_ModelLibraryBody> {
             return ListView(
               padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
               children: [
-                // ── Local files not in catalog ──────────
+                // â”€â”€ Local files not in catalog â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                 if (_filter == _Filter.all ||
                     _filter == _Filter.downloaded) ...[
                   ...downloaded
@@ -187,14 +186,14 @@ class _ModelLibraryBodyState extends State<_ModelLibraryBody> {
                       .map((f) => _localFileCard(context, ctrl, f)),
                 ],
 
-                // ── Count ───────────────────────────────
+                // â”€â”€ Count â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                 _sectionTitle(
                   context,
                   '${_filter == _Filter.all ? "Available" : _filter.name[0].toUpperCase() + _filter.name.substring(1)} Models (${filtered.length})',
                 ),
                 const SizedBox(height: 12),
 
-                // ── Model cards ─────────────────────────
+                // â”€â”€ Model cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                 ...List.generate(filtered.length, (index) {
                   final model = filtered[index];
                   final isDl = downloaded.contains(model.filename);
@@ -653,3 +652,4 @@ class _ImportButton extends StatelessWidget {
     );
   }
 }
+

@@ -84,7 +84,6 @@ class _SplashScreenState extends State<SplashScreen> {
                   width: 80,
                   height: 80,
                   decoration: BoxDecoration(
-                    gradient: AppColors.accentGradient,
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
@@ -94,10 +93,12 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                     ],
                   ),
-                  child: const Icon(
-                    Icons.bolt_rounded,
-                    size: 42,
-                    color: Colors.white,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(
+                      'assets/portbot_icon_1024.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 )
                 .animate()
@@ -115,7 +116,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ).animate().fadeIn(delay: 200.ms, duration: 600.ms),
             const SizedBox(height: 8),
             Text(
-              'Run uncensored LLMs natively on any device 🔓',
+              'Run local AI natively on your device ⚡',
               style: TextStyle(fontSize: 13, color: context.textM),
             ).animate().fadeIn(delay: 400.ms, duration: 600.ms),
             const SizedBox(height: 40),

@@ -1,6 +1,5 @@
-import 'dart:async';
+﻿import 'dart:async';
 import 'dart:io';
-import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:llamadart/llamadart.dart';
 import 'package:path/path.dart' as p;
@@ -21,7 +20,7 @@ class LlmService extends GetxService {
   final lastGenerationTokens = 0.obs;
   final lastGenerationSpeed = 0.0.obs;
 
-  // ── Loading progress tracking ──────────────────────────────
+  // â”€â”€ Loading progress tracking â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   final isLoadingModel = false.obs;
   final loadingProgress = 0.0.obs; // 0.0 to 1.0
   final loadingStatusMsg = ''.obs;
@@ -49,7 +48,7 @@ class LlmService extends GetxService {
 
   /// Initialize the service.
   Future<LlmService> init() async {
-    // Backend is created fresh per loadModel() call — no init needed here
+    // Backend is created fresh per loadModel() call â€” no init needed here
     return this;
   }
 
@@ -84,7 +83,7 @@ class LlmService extends GetxService {
       wakelockService = Get.find<WakelockService>();
     } catch (_) {}
 
-    // Unload previous if any — MUST fully tear down engine + backend
+    // Unload previous if any â€” MUST fully tear down engine + backend
     if (_engine != null || isLoaded.value) {
       loadingStatusMsg.value = 'Unloading previous model...';
       loadingProgress.value = 0.05;
@@ -97,7 +96,7 @@ class LlmService extends GetxService {
       }
     }
 
-    // Fresh backend + engine for every load — prevents stale native state
+    // Fresh backend + engine for every load â€” prevents stale native state
     // Wrapped in try-catch to handle SELinux crashes on Android where
     // ggml_backend_load_all() attempts to scan '/' which is denied.
     try {
@@ -184,7 +183,7 @@ class LlmService extends GetxService {
       progressTimer.cancel();
 
       if (_loadingCancelled) {
-        // User cancelled while loading — full cleanup
+        // User cancelled while loading â€” full cleanup
         await _fullTeardown();
         _resetLoadingState();
         return;
@@ -252,7 +251,7 @@ class LlmService extends GetxService {
     r'|\[end\]',
   );
 
-  /// Pattern that signals the model is hallucinating a new user turn — stop immediately.
+  /// Pattern that signals the model is hallucinating a new user turn â€” stop immediately.
   static final _userTurnPattern = RegExp(
     r'<\|user\|>|<\|im_start\|>\s*user|<start_of_turn>\s*user|\[INST\]',
   );
@@ -295,7 +294,7 @@ class LlmService extends GetxService {
         // Accumulate into buffer for stop-pattern detection
         buffer += token;
 
-        // Check if model is hallucinating a user turn — stop immediately
+        // Check if model is hallucinating a user turn â€” stop immediately
         if (_userTurnPattern.hasMatch(buffer)) {
           final cleaned = buffer
               .replaceAll(_stopPatterns, '')
@@ -403,17 +402,17 @@ class LlmService extends GetxService {
     isGenerating.value = false;
   }
 
-  /// Full native teardown — dispose engine AND backend to prevent stale state.
+  /// Full native teardown â€” dispose engine AND backend to prevent stale state.
   Future<void> _fullTeardown() async {
     if (_engine != null) {
       try {
         await _engine!.dispose();
       } catch (_) {
-        // Engine may already be in broken state — ignore
+        // Engine may already be in broken state â€” ignore
       }
       _engine = null;
     }
-    // Also destroy the backend — it can't be reused after engine disposal
+    // Also destroy the backend â€” it can't be reused after engine disposal
     _backend = null;
     isLoaded.value = false;
     loadedModelPath.value = '';

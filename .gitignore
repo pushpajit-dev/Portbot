@@ -22,3 +22,20 @@ build/
 .DS_Store
 Thumbs.db
 ```
+
+# Added safety ignores
+*.apk
+*.aab
+*.jks
+*.keystore
+local.properties
+key.properties
+.env.production
+*firebase-adminsdk*.json
+credentials.json
+*.pem
+*.p12
+.gradle/
+app/build/
+.cxx/
+node_modules/

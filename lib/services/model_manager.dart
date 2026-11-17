@@ -48,7 +48,7 @@ class ModelManager extends GetxService {
 
     // Fall back to app documents
     final appDir = await getApplicationDocumentsDirectory();
-    final modelsDir = p.join(appDir.path, 'PortableAI', 'models');
+    final modelsDir = p.join(appDir.path, 'Portbot', 'models');
     await Directory(modelsDir).create(recursive: true);
     return modelsDir;
   }
